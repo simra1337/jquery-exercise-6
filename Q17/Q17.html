@@ -1,113 +1,47 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-	<meta charset="utf-8">
-
-	<title></title>
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<style type="text/css">
-
-		#slideshow { 
-
-    margin: 50px auto; 
-
-    position: relative; 
-
-    width: 500px; 
-
-    height: 500px; 
-
-    padding: 10px; 
-
+<title>Question 17</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body {
+	width: 80%;
+	margin: 0px auto;
+}
+div {
+	background-size: auto;
+	background-position: center;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
 }
 
+</style>
+<script lang="javascript">
 
+var array = new Array("slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg");
 
-#slideshow > div { 
+$(document).ready(function(){
 
-    position: absolute; 
+var i = 0;
+$("#demo").css("background-image", "url(" + array[i] + ")");
+setInterval(function () {
+	i++;
+        if (i == array.length) {
+	        i = 0;
+        }
+        $("#demo").fadeOut("slow", function () {
+            $(this).css("background-image", "url(" + array[i] + ")");
+            $(this).fadeIn("slow");
+        });
+}, 500);
+});
 
-    top: 10px; 
-
-    left: 10px; 
-
-    right: 10px; 
-
-    bottom: 10px; 
-
-}
-
-	</style>
-
-</head>
-
-<body>
-
-	<h1>Simple jQuery Image Slider</h1>
-
-
-
-<div id="slideshow">
-
-   <div>
-
-     <img src="https://res.cloudinary.com/trobes/image/upload/v1547224649/seattle.jpg">
-
-   </div>
-
-   <div>
-
-     <img src="https://res.cloudinary.com/trobes/image/upload/v1547224649/nightportrait.jpg">
-
-   </div>
-
-   <div>
-
-     <img src="https://res.cloudinary.com/trobes/image/upload/v1547224649/6lifeftw.jpg">
-
-   </div>
-
-  <div>
-
-     <img src="https://res.cloudinary.com/trobes/image/upload/v1547224649/mountain.jpg">
-
-   </div>
-
-  <div>
-
-     <img src="https://res.cloudinary.com/trobes/image/upload/v1547224649/bird.jpg">
-
-   </div>
-
-<script type="text/javascript">
-
-	$("#slideshow > div:gt(0)").hide();
-
-
-
-setInterval(function() { 
-
-  $('#slideshow > div:first')
-
-    .fadeOut(1000)
-
-    .next()
-
-    .fadeIn(1000)
-
-    .end()
-
-    .appendTo('#slideshow');
-
-},  500);
 
 </script>
-
+</head>
+<body>
+<br />
+<div id="demo"></div>
 </body>
-
 </html>
