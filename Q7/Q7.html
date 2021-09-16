@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q7</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<p id="demo"></p>
+<button>Click to add text</button>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("#demo").append("Click to add text <br>")
+		});
+		$("#demo").click(function() {
+			$("#demo").append("Click to add text <br>")
+		});
+	});
+</script>
+</body>
