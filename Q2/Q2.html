@@ -4,11 +4,11 @@
     </head>
     <body>
         <input type="button" id="demo" value="Click Me!">
-        <p id="ir"></p>
+        <p id="ir">Color of this text will change after button click.</p>
             <script>
                 $(document).ready(function() {
                     $('#demo').click(function(){
-                        $('#demo').addClass('democlass');
+                        $('ir').css('color', 'red');
                         console.log("Hello World");
                     })
 
