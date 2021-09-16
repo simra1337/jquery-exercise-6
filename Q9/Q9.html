@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q9</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<p>What is your competency?</p>
+<select>
+  <option value="">Select items</option>
+  <option value="JVM">JVM
+  <option value="DevOps">DevOps
+  <option value="QE">QE
+  <option value="Cloud Operations">Cloud Operations
+</select>
+<div id="ye"></div>
+<script>
+$(document).ready(function() { 
+         $('select').on('change', function() {
+         $("#ye").append("Welcome Mohd to " + this.value + " competency.");         
+});
+});
+</script>
+</body>
+</html>
