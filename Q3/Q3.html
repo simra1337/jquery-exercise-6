@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div>
+            <h1 class="colornew">Ends with new</h1>
+            <h1 class="colorsh">Not ends with new</h1>
+            <h1 class="colornew">Ends with new</h1>
+            <h1 class="colorsk">Not ends with new</h1>
+            <strong>Testing :</strong>
+            <button class="btnClick" data-backcolor="red">red</button>
+            <button class="btnClick" data-backcolor="green">green</button>
+            <button class="btnClick" data-backcolor="blue">blue</button>
+            <button class="btnClick" data-backcolor="orange">orange</button>
+            <button class="btnClick" data-backcolor="white">white</button>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $(".btnClick").on("click",function(){
+                        var mybackcolor = $(this).data("backcolor");
+                        $("h1[class$='new']" ).css('color', mybackcolor);
+                    });
+
+                })
+            </script>
+    </body>
+</html>
+
+    
+    
