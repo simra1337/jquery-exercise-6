@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Q12</title>
+<style>
+.panel {
+    width : 50%;
+    height : 50%;
+    background : yellow;
+    color: white;
+}
+div ul li {
+    background : black;
+    list-style:none;
+    display: inline;
+    
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="panel">
+       <ul>
+       <li> list inside div</li>
+       <li> list inside div</li>
+       <li> list inside div</li>
+       </ul>
+    </div>
+<script>
+$(document).ready(function()
+{       
+$('.panel').on('click', function () { alert('You clicked on the panel element.'); }).children().on('click', function (e) {
+    e.stopPropagation();   
+});
+});
+</script>
+</body>
+</html>
