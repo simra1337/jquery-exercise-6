@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q5 of jquery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+    </script>
+	<style type="text/css">
+		.target{
+			font-size: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+	<p class="target"> this is a sentence 1 whose parent has id = main</p>
+</div>
+
+<div id="notmain">
+	<p class="target">this is sentence 2</p>
+</div>
+<button class="target">Change</button>
+
+        <script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				/* Act on the event */
+				$(".target").parent("#main").css('font-size', '200%');
+			});
+			
+		});
+    </script>
+
+</body>
+</html>
