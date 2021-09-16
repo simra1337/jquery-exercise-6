@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q6</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style type="text/css">
+		div, p, button{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div>
+<p>This is sentence 1.</p>
+<p>This is sentence 2.</p>
+<p>This is sentence 3.</p>
+This sentence is directly inside the div tag.
+</div>
+	<button id="b1">Change div tags with p tags </button>
+	<button id="b2">Change p tags with div tags</button>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			$("div").replaceWith($("<p>"+$("div").text()+"</p>"));
+		});
+		$("#b2").click(function() {
+			$("p").replaceWith($("<div>" +$("p").text()+ "</div>"));
+		});
+	});
+</script>
+</body>
+</html>
