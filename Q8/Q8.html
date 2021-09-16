@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Q8</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<title>Click Event on Dynamic Elements</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body {
+	width: 80%;
+	margin: 0px auto;
+}
+p {
+	color: Tomato;
+	font-size: 20px;
+}
+</style>
+<script>
+
+$(document).ready(function(){
+
+$("#message").append('<br /><p id="link">This text is added using append and click event will work on this text because I used on() method</p>');
+$("#message2").append('<br /><p id="link">This text is also added using append but click event will not work here</p>');
+
+$("#link").on("click", function(e) {
+	alert('Testing Click Event.');
+});
+});
+</script>
 </head>
 <body>
-<div></div>
-<button>Click here</button>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("button").click(function() {
-    $("div").append("<p>Click me</p>")
-$("div").on("click",function(){
-      $("div").append("<p>Click me</p>") });
-});
-	});
-</script>
+<br />
+<p id="message">Paragraph 1 <a> Tag.</p>
+    <p id="message2">Paragraph 2<a> Tag.</p>
+
 </body>
 </html>
