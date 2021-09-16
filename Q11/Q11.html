@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script>
+  $(document).ready(function() {
+   $('#a').click(function (e) {
+    e.preventDefault();
+    alert('Cannot open google'); 
+   }); 
+  });
+ </script>
+</head>
+<body>
+ <p>Google.com will not open</p>
+ <a id='a' href='http://www.google.com'> google <p></a>
+</body>
+</html>
